@@ -1,0 +1,174 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f8;
+    color: #333;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cabecalho h1 {
+    color: #4b4b8f;
+    margin-bottom: 10px;
+}
+
+.calendario,
+.eventos {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #00000010;
+    margin-bottom: 25px;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.navegacao button {
+    background-color: #4b4b8f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.navegacao button:hover {
+    background-color: #36366f;
+}
+
+.dias-semana,
+.dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.dias-semana {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dia {
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: #f3f4f8;
+    cursor: pointer;
+    position: relative;
+}
+
+.dia:hover {
+    background-color: #dedef5;
+}
+
+.dia.selecionado {
+    background-color: #4b4b8f;
+    color: white;
+}
+
+.dia.hoje {
+    border: 2px solid #4b4b8f;
+}
+
+.dia.vazio {
+    background-color: transparent;
+    cursor: default;
+}
+
+.ponto-evento {
+    width: 6px;
+    height: 6px;
+    background-color: #e58a42;
+    border-radius: 50%;
+    margin-top: 4px;
+}
+
+.eventos h2 {
+    margin-bottom: 15px;
+}
+
+#formEvento {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#nomeEvento {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#formEvento button {
+    background-color: #4b4b8f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#listaEventos {
+    list-style: none;
+}
+
+#listaEventos li {
+    background-color: #f3f4f8;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#listaEventos button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .calendario,
+    .eventos {
+        padding: 15px;
+    }
+
+    .dia {
+        min-height: 45px;
+    }
+
+    #formEvento {
+        flex-direction: column;
+    }
+}

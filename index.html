@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Calendário</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="cabecalho">
+            <h1>Meu Calendário</h1>
+            <p>Organize seus dias e compromissos.</p>
+        </header>
+
+        <section class="calendario">
+
+            <div class="navegacao">
+                <button id="mesAnterior">&lt;</button>
+
+                <h2 id="mesAno"></h2>
+
+                <button id="proximoMes">&gt;</button>
+            </div>
+
+            <div class="dias-semana">
+                <span>Dom</span>
+                <span>Seg</span>
+                <span>Ter</span>
+                <span>Qua</span>
+                <span>Qui</span>
+                <span>Sex</span>
+                <span>Sab</span>
+            </div>
+
+            <div id="dias" class="dias"></div>
+
+        </section>
+
+        <section class="eventos">
+
+            <h2 id="tituloEventos">Eventos do dia</h2>
+
+            <form id="formEvento">
+
+                <input
+                    type="text"
+                    id="nomeEvento"
+                    placeholder="Nome do compromisso"
+                    required
+                >
+
+                <button type="submit">
+                    Adicionar evento
+                </button>
+
+            </form>
+
+            <ul id="listaEventos"></ul>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
